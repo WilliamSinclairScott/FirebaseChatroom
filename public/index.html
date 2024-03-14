@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Basics</title>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyCTSWXZahBCaZYRXM6FGe8rmsxTjSzgD9Y",
+  authDomain: "chatroomexample-8ba3e.firebaseapp.com",
+  projectId: "chatroomexample-8ba3e",
+  storageBucket: "chatroomexample-8ba3e.appspot.com",
+  messagingSenderId: "185520097891",
+  appId: "1:185520097891:web:dd715d26cc099f1ab30656",
+  measurementId: "G-9MLQB5JG7E"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <script src="index.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+    integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+    crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+  <h1>chatRoom Trying Hard 🔥</h1>
+
+  <section id="whenSignedOut">
+
+    <button id="signInBtn" class="btn btn-primary">Sign in with Google</button>
+
+  </section>
+
+  <section id="whenSignedIn" hidden="true">
+
+    <div id="userDetails"></div>
+
+    <button id="signOutBtn" class="btn btn-primary">Sign Out</button>
+
+  </section>
+
+  <hr>
+
+  <section id="whenSignedIn" hidden="true">
+
+    <h2>Will's Super Cool Chatroom!</h2>
+
+    <input type="text" id="message-input">
+    <button id="createMessage" class="btn btn-success">Send</button>
+    
+    <ul id="messagesList">
+
+    </ul>
+
+    
+
+  </section>
+
+
+</body>
+
+</html>

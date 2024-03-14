@@ -69,8 +69,8 @@ auth.onAuthStateChanged(user => {
 
         // Query
         unsubscribe = messageRef
-            .where('uid', '==', user.uid)
-            .orderBy('createdAt') // Requires a query
+            // .where()
+             .orderBy('createdAt') // Requires a query
             .onSnapshot(querySnapshot => {
                 
                 // Map results to an array of li elements
@@ -85,7 +85,9 @@ auth.onAuthStateChanged(user => {
 
                 });
 
-                messageList.innerHTML = items.join('');
+                const lastTenMessages = items.slice(-10)
+
+                messageList.innerHTML = lastTenMessages.reverse().join('');
 
             });
 
